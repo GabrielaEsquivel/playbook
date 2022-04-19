@@ -30,12 +30,20 @@ const trendingTopic = {
     isWorldWide: true,
     currentCity: "Los Angeles",
     dateCreated: new Date(),
-
+    getGeneralInfo: function(){
+      return `trending topic ${this.title} - ${this.amountOfTweets} at ${this.currentCity}`
+    },
    }
    
-
+console.log(trendingTopic.getGeneralInfo())
 
 const hashtag = {
     id: 1284058922,
+    text: 'taylorsversion',
+    amountOfTweets: 1245490354894,
+    getHastag: function(){
+      return `#${this.text}`
+    },
 }
 
+console.log(hashtag.getHastag())
