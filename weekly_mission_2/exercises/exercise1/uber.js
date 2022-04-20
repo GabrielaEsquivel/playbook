@@ -23,18 +23,25 @@ console.log(uberUser.getGeneralInfo())
 
 const travel = {
     id: 123565754654,
-    user: {},
-    destiny: '',
-    departure:'',
+    user: {
+      id: 12345,
+      name: "Andrea Esquivel",
+    },
+    destiny: 'El Pochotal',
+    departure: 'Los Gallos',
     gpsLocationDestiny: '',
     gpsLocationDeparture: '',
-    driver:{},
+    driver:{
+      id: 12345,
+      name: "Ashton Brooke",
+    },
     cost: 35625,
     dateCreated: new Date(),
-    timeEstimated:'',
+    timeEstimated: 1445434402309.34,
     getGeneralInfo: function(){
-      return `trending topic ${this.title} - ${this.amountOfTweets} at ${this.currentCity}`
+      return `information about the travel: 
+        ${this.user.name} is going to ${this.destiny} with ${this.driver.name}`
     },
    }
    
-console.log(trendingTopic.getGeneralInfo())
+console.log(travel.getGeneralInfo())
